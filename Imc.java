@@ -47,11 +47,8 @@ public class Imc {
         } else if (imc >= 30.0 && imc <= 39.9) {
             return "Status: OBESIDADE!";
 
-        } else if (imc >= 40.0) {
-            return "Status: OBESIDADE GRAVE!";
-
         } else {
-            return "Status: OBESIDADE MORBIDA!";
+            return "Status: OBESIDADE GRAVE!";
         }
 
     }
