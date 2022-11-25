@@ -9,7 +9,7 @@ public class Imc {
     private float peso;
 
     //
-    // Construtores (Objetos)
+    // Construtores 
     //
 
     public Imc(float p, float a) {
