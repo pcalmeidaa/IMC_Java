@@ -33,29 +33,27 @@ public class Imc {
         return this.arredonda(this.peso / (this.altura * this.altura));
     }
 
+    public static String result(float imc) {
 
-    public String result(){
+        if (imc < 18.5) {
+            return "Status: MAGREZA!";
 
-        String resultado = " ";
+        } else if (imc >= 18.5 && imc <= 24.9) {
+            return "Status: NORMAL!";
 
-        if(this.calculaImc() < 18.5){
-            resultado ="Status: MAGREZA!";
+        } else if (imc >= 25.0 && imc <= 29.9) {
+            return "Status: SOBREPRESO!";
 
-        }else if(this.calculaImc() >= 18.5 || this.calculaImc() <= 24.9 ){
-            resultado = "Status: NORMAL!";
+        } else if (imc >= 30.0 && imc <= 39.9) {
+            return "Status: OBESIDADE!";
 
-        } else if (this.calculaImc() >= 25.0 || this.calculaImc() <= 29.9) {
-            resultado = "Status: SOBREPRESO!";
+        } else if (imc >= 40.0) {
+            return "Status: OBESIDADE GRAVE!";
 
-        } else if (this.calculaImc() >= 30.0 || this.calculaImc() <= 39.9) {
-            resultado = "Status: OBESIDADE!";
-
-        }else if(this.calculaImc() >= 40.0){
-            resultado = "Status: OBESIDADE GRAVE!";
-
+        } else {
+            return "Status: OBESIDADE MORBIDA!";
         }
 
-        return resultado;
     }
 
     private float arredonda(float entrada) {
